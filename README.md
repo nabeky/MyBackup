@@ -2,9 +2,13 @@
 # 暗号バックアップスクリプト for Ubuntu Linux
 
 Copyright:
+
 MyBackup.sh Version 0.20250410
+
 (C)2025 quawaz,watanabe
+
 Lisense:
+
 This project is licensed under the MIT License
 
 2025/6, Ubuntu 24.04LTS, bash ver.5.2.21
