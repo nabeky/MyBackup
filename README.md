@@ -54,7 +54,6 @@ mailutils、smbclient、curl、特殊なmount関連 など
 
 利用者様の自己責任において、十分に留意の上ご利用ください
 
----
 ## flow / 処理内容
 以下、処理の流れになります
 
@@ -112,7 +111,6 @@ mailutils、smbclient、curl、特殊なmount関連 など
 
 *4:fn_ex_exit()
 
----
 ## mount / マウント
 
 様々な保存先があるかと想定、セキュリティ的にも？マウント関連も制御出来るように致しました
@@ -123,7 +121,6 @@ mailutils、smbclient、curl、特殊なmount関連 など
 
 後述のアップロード機能で、他ホストへ転送される場合は、これらは不要になります
 
----
 ## output / 出力ファイル
 
   [prefix][target dir name][time stamp][ext]
@@ -131,7 +128,6 @@ mailutils、smbclient、curl、特殊なmount関連 など
   例) Backup_Document_20250101.tar.gzc
   ※ 各部位変更可
 
-—
 ## decode / 手動による解凍
 
 生成したファイルを展開するには、先に復号化が必要になります(デフォルト設定の場合は以下)
@@ -156,7 +152,6 @@ mailutils、smbclient、curl、特殊なmount関連 など
 
 *デフォルト設定は標準的な暗号化(AES/256bit)となります
 
----
 ## 簡単解凍
 
 解凍も当スクリプトにて簡単に行う事が出来ます
@@ -188,7 +183,6 @@ _ez_decodeというディレクトリが作られ、その中に展開されま�
     例) ./MyBackup.sh ./work
     例) ./MyBackup.sh ./dir*
 
-—
 ## アップロード
 
 生成ファイルを他ホストなどへ転送（冗長）を行えます
@@ -203,26 +197,25 @@ _ez_decodeというディレクトリが作られ、その中に展開されま�
 
 –test-upload にて動作テストが行えます
 
-  scp
-      SSHファイル転送(scp)
-  samba
-      Windowsファイル送信(smbclient)
-  http
-      HTTPによるアップロード(curl)
-  ftp
-      FTPによるファイル転送(curl)
-  sftp
-      SFTPによるファイル転送(sftp)
-  rsync
-      ファイル同期(rsync)
-  mail
-      メール添付による送信(mail)
-  user
-      ユーザー定義(fn_ex_upload)
+      scp
+          SSHファイル転送(scp)
+      samba
+          Windowsファイル送信(smbclient)
+      http
+          HTTPによるアップロード(curl)
+      ftp
+          FTPによるファイル転送(curl)
+      sftp
+          SFTPによるファイル転送(sftp)
+      rsync
+          ファイル同期(rsync)
+      mail
+          メール添付による送信(mail)
+      user
+          ユーザー定義(fn_ex_upload)
+    
+      * 括弧内は利用するコマンド
 
-  * 括弧内は利用するコマンド
-
----
 ## レポート
 
 バックアップ結果を報告する事が出来ます
@@ -235,18 +228,17 @@ _ez_decodeというディレクトリが作られ、その中に展開されま�
 
 –test-report にて動作テストが行えます
 
-  chat
-      現在ログイン中のユーザーに報告(wall)
-  log
-      syslogに記録(logger)
-  mail
-      メールによる送信
-  http
-      HTTPアクセス(apiなどに)(curl)
-  user
-      ユーザー定義(fn_ex_report)(curl)
+      chat
+          現在ログイン中のユーザーに報告(wall)
+      log
+          syslogに記録(logger)
+      mail
+          メールによる送信
+      http
+          HTTPアクセス(apiなどに)(curl)
+      user
+          ユーザー定義(fn_ex_report)(curl)
 
----
 ## 運用前・改造・ユーザー定義関数他
 
 複雑なコードは御座いませんので、ご自由に改変ください
@@ -302,7 +294,6 @@ _DEBUG に true を設定する事で、その場で動作を停止する事が�
 
  Bashやシェルコードの記事を公開して頂いている多くの先人様に感謝申し上げます
 
----
 ## arguments / 引数
 
     通常バックアップ
