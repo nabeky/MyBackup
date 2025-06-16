@@ -7,16 +7,21 @@ MyBackup.sh Version 0.20250410
 
 Lisense:
 This project is licensed under the MIT License
+
 2025/6, Ubuntu 24.04LTS, bash ver.5.2.21
 
 ## Usage:
 定期＆手動お手軽暗号バックアップスクリプト
-Tar/Zipで丸め暗号化、偽ファイル生成、外部ストレージや
-他ホストへアップロード、レポート報告、動的マウントなど
+
+Tar/Zipで丸め暗号化、偽ファイル生成、外部ストレージや他ホストへアップロード、レポート報告、動的マウントなど
 普段のバックアップ用途でも手軽に使えるように配慮しました
+
 本ファイル、Config:欄 にて、事前設定しご利用ください
+
 貴方お好みに改修してお使いください
+
 Ubuntu24.04LTS及びWSL2にて、動作確認しております
+
 パスワードが記載されるため権限設定は確実に！
 chmod 0700 ./MyBackup.sh
 
