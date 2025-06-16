@@ -69,7 +69,7 @@ chmod 0700 ./MyBackup.sh
   - 生成ファイル削除
   - 偽ファイル生成(default:off)
 
-* trap:EXIT
+### trap:EXIT
 
 - 後処理
   - 書込フラッシュ
@@ -77,7 +77,7 @@ chmod 0700 ./MyBackup.sh
   - レポート(syslog/chat/mail/ユーザー定義*3他)
   - ユーザー定義*4
 
-* trap:ERR
+### trap:ERR
 
   - エラー表示（DEBUG情報）
 
