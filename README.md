@@ -1,5 +1,5 @@
-MyBackup (personal backup script)
-暗号バックアップスクリプト for Ubuntu Linux
+# MyBackup (personal backup script)
+# 暗号バックアップスクリプト for Ubuntu Linux
 
 Copyright:
 MyBackup.sh Version 0.20250410
@@ -9,7 +9,7 @@ This project is licensed under the MIT License
 
 2025/6, Ubuntu 24.04LTS, bash ver.5.2.21
 
-Usage:
+## Usage:
 定期＆手動お手軽暗号バックアップスクリプト
 Tar/Zipで丸め暗号化、偽ファイル生成、外部ストレージや
 他ホストへアップロード、レポート報告、動的マウントなど
@@ -32,7 +32,7 @@ chmod 0700 ./MyBackup.sh
     解凍も同じスクリプトで簡単
     MyBackup.sh ./buckup20250701.tar.gzc
 
-注意
+## 注意
 通常、表示は行いませんので、実運用に移行する前は、
 “-v"オプションを付けて、テストしてください
 (_DEBUGフラグもtrueを推奨。後述)
@@ -47,8 +47,7 @@ mailutils、smbclient、curl、特殊なmount関連 など
 利用による結果には責任を負いません
 利用者様の自己責任において、十分に留意の上ご利用ください
 
-flow / 処理内容
-
+## flow / 処理内容
 以下、処理の流れになります
 
     -モード切替
@@ -107,7 +106,7 @@ flow / 処理内容
     *4:fn_ex_exit()
 
 —
-mount / マウント
+## mount / マウント
 
 様々な保存先があるかと想定、セキュリティ的にも？
 マウント関連も制御出来るように致しました
@@ -116,7 +115,7 @@ mount / マウント
 後述のアップロード機能で、他ホストへ転送される場合は、これらは不要になります
 
 —
-output / 出力ファイル
+## output / 出力ファイル
 
     [prefix][target dir name][time stamp][ext]
 
@@ -124,7 +123,7 @@ output / 出力ファイル
     ※ 各部位変更可
 
 —
-decode / 手動による解凍
+## decode / 手動による解凍
 
 生成したファイルを展開するには、先に復号化が必要になります
 (デフォルト設定の場合は以下)
@@ -142,7 +141,7 @@ unzip xxx.zip
 *デフォルト設定は標準的な暗号化(AES/256bit)となります
 
 —
-簡単解凍
+## 簡単解凍
 
 解凍も当スクリプトにて簡単に行う事が出来ます
 パスワードや、コマンドの引数などを再度調べ直す手間が省けます
@@ -155,7 +154,7 @@ _ez_decodeというディレクトリが作られ、その中に展開されま�
     例) ./MyBackup.sh ./*.tar.gzc
 
 —
-クイックバックアップ
+## クイックバックアップ
 
 直接ディレクトリを指定して、バックアップを行えます
 予め設定された場所に保存されます
@@ -166,8 +165,7 @@ _ez_decodeというディレクトリが作られ、その中に展開されま�
     例) ./MyBackup.sh ./dir*
 
 —
-
-アップロード
+## アップロード
 
 生成ファイルを他ホストなどへ転送（冗長）を行えます
 方法は以下の種類、他、ユーザー定義も指定できます
@@ -196,7 +194,7 @@ _ez_decodeというディレクトリが作られ、その中に展開されま�
     * 括弧内は利用するコマンド
 
 —
-レポート
+## レポート
 
 バックアップ結果を報告する事が出来ます
 方法は以下の種類、他、ユーザー定義も指定できます
@@ -216,7 +214,7 @@ _ez_decodeというディレクトリが作られ、その中に展開されま�
         ユーザー定義(fn_ex_report)(curl)
 
 —
-運用前・改造・ユーザー定義関数他
+## 運用前・改造・ユーザー定義関数他
 
 複雑なコードは御座いませんので、ご自由に改変ください
 十分なデバッグを行っておりますが、複数の環境想定、全パターンでの確認は実施しておりません
@@ -254,7 +252,7 @@ _DEBUG に true を設定する事で、その場で動作を停止する事が�
 当初は、SSH上(Ubuntu24.04LTS実機)+Vimで、後半はWSL2(同24.04)+VSCodeで書きました
  Bashやシェルコードの記事を公開して頂いている多くの先人様に感謝申し上げます
 —
-arguments / 引数
+## arguments / 引数
 
     通常バックアップ
     (規定場所のバックアップ)
@@ -269,7 +267,7 @@ arguments / 引数
     mode:クイックバックアップ
     例) ./MyBackup.sh ./work
 
-options:
+### options:
 -b|–ball
     build tar/zip only
     Tar/Zip生成のみで終了します
@@ -290,7 +288,7 @@ options:
     added fake-file
     偽バックアップファイルを追加生成
 
-quick-modes:
+### quick-modes:
 *自動で、-vが付与されます
 
 [filename] [filename] …
@@ -303,7 +301,7 @@ quick-modes:
     設定値で、対象をバックアップし保存します
     他のオプションは機能しません
 
-test-modes:
+### test-modes:
 *自動で、-vが付与されます
 –test-file
     mode:動作テスト用のファイルを生成します
@@ -319,7 +317,7 @@ test-modes:
 –test-report
     mode:レポートの動作テストを行います
 
-???-modes:
+### ???-modes:
 no|none|pass|null|nurupo|hoge*|fuga*
     mode:何もしません
 color|colors|ansi
