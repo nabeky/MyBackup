@@ -37,7 +37,10 @@ chmod 0700 ./MyBackup.sh
     解凍も同じスクリプトで簡単
     MyBackup.sh ./buckup20250701.tar.gzc
 
-## Usage画面
+### 実行例（通常動作）
+![Image](https://github.com/user-attachments/assets/6f3615e1-e508-4fdb-9ca2-8797b1907cfd)
+
+### Usage画面
 ![Image](https://github.com/user-attachments/assets/dad4cedb-c042-4741-9a0c-087d0bb2b018)
 
 > [!IMPORTANT]
