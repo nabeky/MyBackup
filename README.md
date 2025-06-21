@@ -25,16 +25,16 @@ Ubuntu24.04LTS及びWSL2にて、動作確認しております
 パスワードが記載されるため権限設定は確実に！
 chmod 0700 ./MyBackup.sh
 
-* cronでの定期実行
-    crontab -e
+* cronでの定期実行  
+    crontab -e  
     (super user) sudoedit /etc/cron. (daily,monthry..)
-* logoff時の自動実行
+* logoff時の自動実行  
     .bashrc:trap '/home/user/MyBackup.sh' EXIT
-* クイックバックアップ
-    好きなタイミングで適当なDirをバックアップ
+* クイックバックアップ  
+    好きなタイミングで適当なDirをバックアップ  
     MyBackup.sh ./pictures
-* 簡単解凍
-    解凍も同じスクリプトで簡単
+* 簡単解凍  
+    解凍も同じスクリプトで簡単  
     MyBackup.sh ./buckup20250701.tar.gzc
 
 ### 実行例（通常動作）
