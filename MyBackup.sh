@@ -127,7 +127,7 @@ declare -gr _DEV_MNT_PATH=''
 #* 保存先デバイス
 #* 処理前に空き容量を確認します
 #* 空の場合、確認しません(保存先がネットワーク先など)
-declare -gr _DEV_STORAGE='/dev/sdb1'
+declare -gr _DEV_STORAGE='/dev/sda'
 #declare -gr _DEV_STORAGE='/dev/sr0'	# CD/DVD/Blueray
 #declare -gr _DEV_STORAGE='/dev/st0'	# Tape
 #declare -gr _DEV_STORAGE='/dev/rmt/0'	# Tape
@@ -140,7 +140,8 @@ declare -gri _DEV_MIN=512
 ## [Config:Backup storage]
 ## バックアップ保存先(又は、書出ディレクトリ)
 #* WSLの場合は、/mnt/c 以下でWindows側に出力できます
-declare -gr _DIR_STORAGE_BACKUPS='/mnt/backup'
+declare -gr _DIR_STORAGE_BACKUPS='/var/tmp'
+#declare -gr _DIR_STORAGE_BACKUPS='/mnt/backup'
 #declare -gr _DIR_STORAGE_BACKUPS='/media/backup'
 #declare -gr _DIR_STORAGE_BACKUPS='/mnt/c/Users/USERNAME/OneDrive/Documents'
 
@@ -394,7 +395,7 @@ MyBackup (personal backup script)
 .
 Copyright:
 [_AE_DEF]
-MyBackup.sh Version 0.20250410
+MyBackup.sh Version 0.20250621
 (C)2025 quawaz,Watanabe
 Lisense:
 [_AE_DEF]
