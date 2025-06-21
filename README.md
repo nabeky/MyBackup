@@ -46,6 +46,9 @@ chmod 0700 ./MyBackup.sh
 ### 設定用カラー表示
 ![Image](https://github.com/user-attachments/assets/e31014a6-e900-4550-93fc-29b1c0338aa0)
 
+### 設定：ユーザー定義（MySQLダンプサンプル）
+![Image](https://github.com/user-attachments/assets/63f97527-f183-4035-8a96-1c73da597cd8)
+
 > [!IMPORTANT]
 > 通常、表示は行いませんので、実運用に移行する前は、“-v"オプションを付けて、テストしてください(_DEBUGフラグもtrueを推奨。後述)
 > 
