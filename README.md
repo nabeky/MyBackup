@@ -43,6 +43,9 @@ chmod 0700 ./MyBackup.sh
 ### Usage画面
 ![Image](https://github.com/user-attachments/assets/dad4cedb-c042-4741-9a0c-087d0bb2b018)
 
+### 設定用カラー表示
+![Image](https://github.com/user-attachments/assets/e31014a6-e900-4550-93fc-29b1c0338aa0)
+
 > [!IMPORTANT]
 > 通常、表示は行いませんので、実運用に移行する前は、“-v"オプションを付けて、テストしてください(_DEBUGフラグもtrueを推奨。後述)
 > 
